@@ -1,5 +1,5 @@
 .page-header {
-    background-color: rgba(2, 54, 56, 0.863);
+    background-color: rgba(207, 62, 5, 0.863);
     padding:  30px 20px 20px 50px ;
     font-family: 'Homemade Apple', cursive;
     
@@ -9,7 +9,7 @@
     font-size: 4rem;
 }
 body {
-    background-color: rgba(255, 255, 255, 0.863);
+    background-color: rgb(145, 212, 243);
 }
 
 .content {
