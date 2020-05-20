@@ -1,21 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miyu's blog</title>
-</head>
-<body style="background-color: black;color: aqua;">
-    <div>
-        <h1 style="font-size: 2rem;"><a href="/">Miyu'sBlog</a></h1>
-    </div>
+{% extends 'blog/base.html' %}
 
+
+{% block content %}
     {% for post in posts %}
-        <div>
-            <p>published: {{ post.published_date }}</p>
-            <h2 style="font-size: 1.5rem;"><a href="">{{ post.title }}</a></h2>
-            <p>{{ post.text|linebreaksbr }}</p>
-         </div>
+        <div class="post">
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+            <p id="space">{{ post.text|linebreaksbr }}</p>
+        </div>
     {% endfor %}
-</body>
-</html>
+{% endblock %}
